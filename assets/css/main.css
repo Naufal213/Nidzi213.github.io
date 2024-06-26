@@ -1485,6 +1485,15 @@ section,
 /*--------------------------------------------------------------
 # Team Section
 --------------------------------------------------------------*/
+.team {
+  display: flex;
+  flex-wrap: wrap; /* Agar elemen yang tidak muat dalam satu baris dapat turun ke baris berikutnya */
+  justify-content: center; /* Memusatkan elemen secara horizontal */
+  align-items: center; /* Memusatkan elemen secara vertikal */
+  height: 100vh; /* Mengisi tinggi layar agar elemen benar-benar di tengah layar */
+}
+
+/* CSS yang sudah ada */
 .team .member {
   position: relative;
 }
