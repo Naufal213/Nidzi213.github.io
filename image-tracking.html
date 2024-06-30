@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v7.0.0/dist/aframe-extras.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+    </head>
+    <style>
+        .btn-back {
+            display: block;
+            margin: 20px;
+            padding: 10px 20px;
+            background: linear-gradient(to left, #5c98ff, #ff5fcf);
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            font-size: 1rem;
+            position: relative;
+            z-index: 10;
+            text-align: center;
+        }
+
+        .btn-back:hover {
+            background: linear-gradient(to right, #5f74ff, #7bfec1);
+            color:black;
+        }
+    </style>
+    <body>
+        <a href="website.html" class="btn-back">Back</a>
+        <a-scene mindar-image="imageTargetSrc: ./targets/targets1.mind; maxTrack: 10" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+        <a-assets>
+            <a-asset-item id="bullpuppyModel" src="./assets/bullpuppy/scene.gltf"></a-asset-item>
+            <a-asset-item id="chihuahuaModel" src="./assets/chihuahua/scene.gltf"></a-asset-item>
+            <a-asset-item id="corgiModel" src="./assets/corgi/scene.gltf"></a-asset-item>
+            <a-asset-item id="dachshundModel" src="./assets/dachshund/scene.gltf"></a-asset-item>
+            <a-asset-item id="dogModel" src="./assets/dog/scene.gltf"></a-asset-item>
+            <a-asset-item id="goldenModel" src="./assets/golden/scene.gltf"></a-asset-item>
+            <a-asset-item id="labradorModel" src="./assets/labrador/scene.gltf"></a-asset-item>
+            <a-asset-item id="lowpolyModel" src="./assets/lowpoly/scene.gltf"></a-asset-item>
+            <a-asset-item id="shibaModel" src="./assets/shiba/scene.gltf"></a-asset-item>
+            <a-asset-item id="skatebullModel" src="./assets/skatebull/scene.gltf"></a-asset-item>
+
+            <a-image id="bullpuppy" src="./card/1.png"></a-image>
+            <a-image id="chihuahua" src="./card/2.png"></a-image>
+            <a-image id="corgi" src="./card/3.png"></a-image>
+            <a-image id="dachshund" src="./card/4.png"></a-image>
+            <a-image id="dog" src="./card/5.png"></a-image>
+            <a-image id="golden" src="./card/6.png"></a-image>
+            <a-image id="labrador" src="./card/7.png"></a-image>
+            <a-image id="lowpoly" src="./card/8.png"></a-image>
+            <a-image id="shiba" src="./card/9.png"></a-image>
+            <a-image id="skatebull" src="./card/10.png"></a-image>
+        </a-assets>
+        <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+            <a-entity mindar-image-target="targetIndex: 0">
+                <a-image scale="2 1.25" src="#bullpuppy"></a-image> 
+                <a-gltf-model rotation="90 -0 0" position="0.15 -0.45 0.3" scale="3 3 3" src="#bullpuppyModel" animation-mixer>
+            </a-entity>
+            <a-entity mindar-image-target="targetIndex: 1">
+                <a-image scale="2 1.25" src="#chihuahua"></a-image>
+                <a-gltf-model rotation="90 -0 0" position="0.15 -0.45 0.3" scale="0.01 0.01 0.01" src="#chihuahuaModel" animation-mixer>
+            </a-entity>
+            <a-entity mindar-image-target="targetIndex: 2">
+                <a-image scale="2 1.25" src="#corgi"></a-image>
+                <a-gltf-model rotation="90 0 0 " position="0 -0.25 0" scale="0.3 0.3 0.3" src="#corgiModel" animation-mixer>
+            </a-entity> 
+            <a-entity mindar-image-target="targetIndex: 3">
+                <a-image scale="2 1.25" src="#dachshund"></a-image>
+                <a-gltf-model rotation="90 -0 0" position="0.15 -0.45 0.3" scale="0.3 0.3 0.3" src="#dachshundModel" animation-mixer>
+            </a-entity>
+            <a-entity mindar-image-target="targetIndex: 4">
+                <a-image scale="2 1.25" src="#dog"></a-image>
+                <a-gltf-model rotation="90 0 0" position="0.15 -0.45 0.5" scale="18 18 18" src="#dogModel" animation-mixer>
+            </a-entity>
+            <a-entity mindar-image-target="targetIndex: 5">
+                <a-image scale="2 1.25" src="#golden"></a-image>
+                <a-gltf-model rotation="0 0 0 " position="0 0 0" scale="0.008 0.008 0.008" src="#goldenModel" animation-mixer>
+            </a-entity> 
+            <a-entity mindar-image-target="targetIndex: 6">
+                <a-image scale="2 1.25" src="#labrador"></a-image>
+                <a-gltf-model rotation="180 90 90" position="0.15 -0.35 0.5" scale="1 1 1" src="#labradorModel" animation-mixer>
+            </a-entity> 
+            <a-entity mindar-image-target="targetIndex: 7">
+                <a-image scale="2 1.25" src="#lowpoly"></a-image>
+                <a-gltf-model rotation="-90 -180 0" position="0.15 -0.35 0.3" scale="0.0035 0.0035 0.0035" src="#lowpolyModel" animation-mixer>
+            </a-entity>
+            <a-entity mindar-image-target="targetIndex: 8">
+                <a-image scale="2 1.25" src="#shiba"></a-image>
+                <a-gltf-model rotation="90 0 0" position="0.15 -0.25 0.8" scale="0.65 0.65 0.65" src="#shibaModel" animation-mixer>
+            </a-entity>
+            <a-entity mindar-image-target="targetIndex: 9">
+                <a-image scale="2 1.25" src="#skatebull"></a-image>
+                <a-gltf-model rotation="90 0 0" position="0.15 -0.25 0.3" scale="0.75 0.75 0.75" src="#skatebullModel" animation-mixer>
+            </a-entity>
+        </a-scene>
+    </body>
+</html>
